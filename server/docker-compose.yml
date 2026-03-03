@@ -9,7 +9,7 @@ services:
       - "127.0.0.1:8080:8080"
     environment:
       - ALLOWED_ORIGIN=https://mscheduler.seginus.jp
-      - SAKURA_VAULT_ID=113800511179
+      - SAKURA_VAULT_ID=Terraform構築後に設定
       - SAKURA_SECRET_NAME=database_secret_value
       - SAKURA_ACCESS_TOKEN_FILE=/run/secrets/sakura_access_token
       - SAKURA_ACCESS_TOKEN_SECRET_FILE=/run/secrets/sakura_access_token_secret
