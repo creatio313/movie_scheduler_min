@@ -1,0 +1,30 @@
+services:
+  movie_scheduler_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: vpn-server.seginus.jp/movie_scheduler_api:v1
+    container_name: movie_scheduler_api_container
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      - ALLOWED_ORIGIN=https://mscheduler.seginus.jp
+      - SAKURA_VAULT_ID=113800511179
+      - SAKURA_SECRET_NAME=database_secret_value
+      - SAKURA_ACCESS_TOKEN_FILE=/run/secrets/sakura_access_token
+      - SAKURA_ACCESS_TOKEN_SECRET_FILE=/run/secrets/sakura_access_token_secret
+    secrets:
+      - sakura_access_token
+      - sakura_access_token_secret
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50k"
+        max-file: "5"
+    restart: always
+
+secrets:
+  sakura_access_token:
+    file: ./secrets/sakura_access_token.txt
+  sakura_access_token_secret:
+    file: ./secrets/sakura_access_token_secret.txt
