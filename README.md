@@ -1,5 +1,5 @@
 > [!WARNING]
-> このリポジトリのコードは記事からの参照用に保持していますが、更新はしていません。[撮影計画支援電算処理システム](https://mscheduler.seginus.jp/)の最新ソースコードは[こちら](https://vps.seginus.jp/gitbucket/creatio313/mscheduler)に格納してあります。
+> このリポジトリのコードは記事からの参照用に保持していますが、更新はしていません。[撮影計画支援電算処理システム](https://mscheduler.seginus.jp/)の最新ソースコードは[こちら](https://gitbucket.seginus.jp/root/mscheduler)に格納してあります。
 > あくまで参考としてご覧ください。
 
 さくらのVPS×さくらのクラウドで実行する縮小アーキテクチャ版のソース群です。
